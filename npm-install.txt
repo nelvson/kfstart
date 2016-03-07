@@ -1,0 +1,21 @@
+# babel
+npm install babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-2 babel-plugin-transform-class-properties
+
+# eslint
+npm install eslint babel-eslint eslint-plugin-babel eslint-plugin-flow-vars eslint-plugin-react
+
+# webpack
+npm install webpack babel-loader
+
+# react
+npm install react react-dom classnames
+
+# testing
+npm install mocha expect
+
+# node promises
+npm install denodeify
+
+# database
+npm install pouchdb
+
