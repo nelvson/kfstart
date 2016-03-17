@@ -1,5 +1,5 @@
 # babel
-npm install babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-2 babel-plugin-transform-class-properties
+npm install babel-cli babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-2 babel-plugin-transform-class-properties
 
 # eslint
 npm install eslint babel-eslint eslint-plugin-babel eslint-plugin-flow-vars eslint-plugin-react
@@ -18,4 +18,3 @@ npm install denodeify
 
 # database
 npm install pouchdb
-
