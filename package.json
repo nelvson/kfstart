@@ -1,0 +1,27 @@
+{
+  "name": "kfstart",
+  "version": "0.1.0",
+  "description": "Quick start for your JS/React projects",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "shelljs": "^0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kodefox/kfstart.git"
+  },
+  "keywords": [
+    "javascript",
+    "npm",
+    "starter"
+  ],
+  "author": "team@kodefox.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kodefox/kfstart/issues"
+  },
+  "homepage": "https://github.com/kodefox/kfstart#readme"
+}
