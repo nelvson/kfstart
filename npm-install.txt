@@ -8,7 +8,7 @@ npm install eslint babel-eslint eslint-plugin-babel eslint-plugin-flow-vars esli
 npm install webpack babel-loader
 
 # react
-npm install react react-dom classnames
+npm install react react-dom classnames class-autobind
 
 # testing
 npm install mocha expect
