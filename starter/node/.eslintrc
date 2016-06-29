@@ -2,16 +2,13 @@
   "parser": "babel-eslint",
   "plugins": [
     "babel",
-    "flow-vars",
-    "react"
+    "flow-vars"
   ],
   "env": {
+    "es6": true,
     "node": true
   },
-  "globals": {
-    "Map": false,
-    "Set": false
-  },
+  "globals": {},
   "rules": {
     "no-cond-assign": 1,                  // disallow assignment in conditional expressions
     "no-console": 0,                      // disallow use of console: should use nuclide-logging instead
@@ -112,19 +109,6 @@
     "no-process-exit": 0,                 // disallow process.exit()
     "no-restricted-modules": 1,           // restrict usage of specified node modules
     "no-sync": 0,                         // disallow use of synchronous methods
-
-    // React (eslint-plugin-react)
-
-    "jsx-quotes": [1, "prefer-double"],   // <Foo bar="x" /> not <Foo bar='x' />
-    "react/jsx-curly-spacing": [          // Enforce or disallow spaces inside of curly braces in JSX attributes
-      1, "never"
-    ],
-    "react/jsx-no-undef": 1,              // Disallow undeclared variables in JSX
-    "react/jsx-uses-react": 1,            // Prevent React to be incorrectly marked as unused
-    "react/jsx-uses-vars": 1,             // Prevent variables used in JSX to be incorrectly marked as unused
-    "react/no-unknown-property": 1,       // Prevent usage of unknown DOM property
-    "react/prop-types": 1,                // Prevent missing props validation in a React component definition
-    "react/react-in-jsx-scope": 2,        // Prevent missing React when using JSX
 
     // Stylistic (these rules are purely matters of style and are quite subjective)
 

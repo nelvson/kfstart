@@ -1,0 +1,18 @@
+{
+  "name": "$NAME",
+  "version": "0.1.0",
+  "private": true,
+  "description": "$NAME",
+  "scripts": {
+    "start": "webpack-dev-server main",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "flow",
+    "test-src": "mocha src/__tests__/*.js src/**/__tests__/*.js",
+    "test": "npm run lint && npm run typecheck && npm run test-src"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

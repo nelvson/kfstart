@@ -6,12 +6,12 @@
     "react"
   ],
   "env": {
-    "node": true
+    "browser": true,
+    "commonjs": true,
+    "es6": true
   },
   "globals": {
-    "fetch": false,
-    "Map": false,
-    "Set": false
+    "fetch": false
   },
   "rules": {
     "no-cond-assign": 1,                  // disallow assignment in conditional expressions
