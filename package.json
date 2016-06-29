@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "shelljs": "^0.6.0"
+    "shelljs": "^0.7.0"
   },
   "repository": {
     "type": "git",
