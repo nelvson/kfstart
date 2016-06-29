@@ -2,7 +2,7 @@
   "name": "kfstart",
   "version": "0.1.0",
   "description": "Quick start for your JS/React projects",
-  "main": "main.js",
+  "main": "lib/main.js",
   "scripts": {
     "test": "mocha"
   },
