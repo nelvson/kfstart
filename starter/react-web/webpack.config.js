@@ -20,9 +20,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'assets'),
-    publicPath: '/assets/',
+    publicPath: '/',
     filename: '[name].js',
-    libraryTarget: 'commonjs2',
   },
   module: {loaders: loaders},
 };
