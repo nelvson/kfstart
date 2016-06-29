@@ -3,10 +3,20 @@
   "version": "0.1.0",
   "description": "Quick start for your JS/React projects",
   "main": "lib/main.js",
+  "bin": {
+    "kfstart": "./bin/kfstart.js"
+  },
   "scripts": {
-    "test": "mocha"
+    "prepublish": "npm run build",
+    "build": "rimraf lib && babel src --ignore '_*' --out-dir lib",
+    "build-watch": "babel src --watch --ignore '_*' --out-dir lib",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "flow",
+    "test-src": "mocha src/__tests__/*.js src/**/__tests__/*.js",
+    "test": "npm run lint && npm run typecheck && npm run test-src"
   },
   "dependencies": {
+    "commander": "^2.9.0",
     "shelljs": "^0.7.0"
   },
   "devDependencies": {
@@ -21,7 +31,8 @@
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-flow-vars": "^0.4.0",
     "expect": "^1.20.1",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "rimraf": "^2.5.2"
   },
   "repository": {
     "type": "git",
