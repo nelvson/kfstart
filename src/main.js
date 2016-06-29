@@ -22,6 +22,7 @@ const CONFIG = {
     mkdir: ['assets', 'src', 'node_modules'],
     seedFiles: {
       'src/main.js': 'console.log(\'Hello World\');\n',
+      'assets/index.html': '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>App</title>\n</head>\n<body>\n  <script src="/main.js"></script>\n</body>\n</html>\n',
     },
     packages: [
       // react
