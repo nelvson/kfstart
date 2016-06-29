@@ -159,7 +159,7 @@
     "no-mixed-spaces-and-tabs": 1,        // disallow mixed spaces and tabs for indentation
     "indent": [1, 2, {"SwitchCase": 1}],  // indentation should be two spaces
     "quotes": [                           // enforce single quotes, allow double to avoid escaping ("don't escape" instead of 'don\'t escape')
-      1, "single", "avoid-escape"
+      1, "single", {"avoid-escape": true, "allowTemplateLiterals": true}
     ],
     "quote-props": [1, "as-needed"],      // require quotes around object literal property names
     "semi": 1,                            // require or disallow use of semicolons instead of ASI
