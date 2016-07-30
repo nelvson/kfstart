@@ -1,4 +1,4 @@
 _*
 !__tests__
-assets/
-node_modules/
+/assets
+/node_modules
