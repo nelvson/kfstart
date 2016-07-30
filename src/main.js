@@ -16,6 +16,7 @@ const CONFIG = {
       'default.eslintrc': '.eslintrc',
       'default.flowconfig': '.flowconfig',
       'default.gitignore': '.gitignore',
+      flow: '',
       test: '',
       'webpack.config.js': '',
     },
