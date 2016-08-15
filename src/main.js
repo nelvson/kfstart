@@ -39,7 +39,7 @@ const CONFIG = {
       // webpack
       'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
-      'mocha', 'expect', 'enzyme',
+      'mocha', 'expect', 'enzyme', 'react-addons-test-utils',
     ],
   },
   node: {
