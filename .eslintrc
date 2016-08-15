@@ -152,7 +152,7 @@
     "space-before-function-paren": [      // disallow a space before function parenthesis
       1, "never"
     ],
-    "object-curly-spacing": [             // disallow spaces inside of curly braces in object literals
+    "babel/object-curly-spacing": [             // disallow spaces inside of curly braces in object literals
       1, "never"
     ],
     "array-bracket-spacing": [            // disallow spaces inside of curly braces in array literals
@@ -187,12 +187,6 @@
     // Legacy (included for compatibility with JSHint and JSLint. While the names of the rules may not match up with the JSHint/JSLint counterpart, the functionality is the same)
 
     "max-depth": 0,                       // specify the maximum depth that blocks can be nested
-    //"max-len": [                        // specify the maximum length of a line in your program [warning level, max line length, number of characters to treat a tab as]
-    //  1, 100, 2, {
-    //    "ignoreUrls": true,
-    //    "ignorePattern": "^\\s*(import\\s[^{]+from|(var|const|let)\\s[^{]+=\\s*require\\s*\\()"
-    //  }
-    //],
     "max-params": 0,                      // limits the number of parameters that can be used in the function declaration.
     "max-statements": 0,                  // specify the maximum number of statement allowed in a function
     "no-bitwise": 0,                      // disallow use of bitwise operators

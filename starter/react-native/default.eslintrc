@@ -169,7 +169,7 @@
     "space-before-function-paren": [      // disallow a space before function parenthesis
       1, "never"
     ],
-    "object-curly-spacing": [             // disallow spaces inside of curly braces in object literals
+    "babel/object-curly-spacing": [             // disallow spaces inside of curly braces in object literals
       1, "never"
     ],
     "array-bracket-spacing": [            // disallow spaces inside of curly braces in array literals
