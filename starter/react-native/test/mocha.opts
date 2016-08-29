@@ -1,2 +1,1 @@
---compilers js:./test/support/compiler
---require ./test/support/init
+--compilers js:babel-core/register

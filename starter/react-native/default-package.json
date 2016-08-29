@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "description": "$NAME",
-  "main": "lib/main.js",
   "scripts": {
-    "start": "node lib/main.js",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
     "test-src": "mocha src/__tests__/*.js src/**/__tests__/*.js",
