@@ -1,7 +1,4 @@
 [ignore]
-# Ignore underscore files.
-.*/_[^_].*
-
 # Ignore compiled code.
 <PROJECT_ROOT>/assets/.*
 
