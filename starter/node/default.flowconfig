@@ -2,9 +2,6 @@
 # Ignore compiled code.
 <PROJECT_ROOT>/lib/.*
 
-# Ugh
-.*node_modules/fbjs.*
-
 [include]
 
 [libs]

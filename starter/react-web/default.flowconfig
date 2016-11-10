@@ -2,9 +2,6 @@
 # Ignore compiled code.
 <PROJECT_ROOT>/assets/.*
 
-# Ugh
-.*node_modules/fbjs.*
-
 [include]
 
 [libs]

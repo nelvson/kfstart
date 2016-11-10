@@ -5,10 +5,11 @@
   "description": "$NAME",
   "main": "lib/main.js",
   "scripts": {
-    "start": "node lib/main.js",
+    "build": "babel src --ignore \"_*\" --out-dir lib",
+    "prepublish": "npm run build",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
-    "test-src": "mocha 'src/**/__tests__/*.js'",
+    "test-src": "mocha \"src/**/__tests__/*.js\"",
     "test": "npm run lint && npm run typecheck && npm run test-src"
   },
   "dependencies": {},

@@ -33,7 +33,7 @@ const CONFIG = {
       // babel (with react)
       'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties',
       // eslint (with react)
-      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flow-vars', 'eslint-plugin-react',
+      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype', 'eslint-plugin-react',
       // flow
       'flow-bin',
       // webpack
@@ -58,15 +58,12 @@ const CONFIG = {
     seedFiles: {
       'src/main.js': 'console.log(\'Hello World\');\n',
     },
-    packages: [
-      // promise helpers
-      'denodeify',
-    ],
+    packages: [],
     devPackages: [
       // babel (without react)
       'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties', 'babel-plugin-transform-flow-strip-types', 'babel-plugin-syntax-flow',
       // eslint (without react)
-      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flow-vars',
+      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
       // flow
       'flow-bin',
       // testing
