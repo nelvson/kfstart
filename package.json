@@ -2,17 +2,16 @@
   "name": "kfstart",
   "version": "0.11.0",
   "description": "Quick start for your JS/React projects",
-  "main": "lib/main.js",
   "bin": {
     "kfstart": "./bin/kfstart.js"
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rimraf lib && babel src --ignore '_*' --out-dir lib",
-    "build-watch": "babel src --watch --ignore '_*' --out-dir lib",
+    "build": "rimraf lib && babel src --ignore \"_*\" --out-dir lib",
+    "build-watch": "babel src --watch --ignore \"_*\" --out-dir lib",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
-    "test-src": "mocha src/__tests__/*.js src/**/__tests__/*.js",
+    "test-src": "mocha \"src/**/__tests__/*.js\"",
     "test": "npm run lint && npm run typecheck && npm run test-src"
   },
   "dependencies": {
@@ -29,7 +28,7 @@
     "babel-preset-stage-2": "^6.11.0",
     "eslint": "^2.13.1",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-flow-vars": "^0.4.0",
+    "eslint-plugin-flowtype": "^2.25.0",
     "expect": "^1.20.2",
     "flow-bin": "^0.27.0",
     "mocha": "^2.5.3",
@@ -44,7 +43,7 @@
     "npm",
     "starter"
   ],
-  "author": "team@kodefox.com",
+  "author": "devteam@kodefox.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kodefox/kfstart/issues"

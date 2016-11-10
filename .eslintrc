@@ -1,15 +1,30 @@
 {
   "parser": "babel-eslint",
+  "extends": [
+    "plugin:flowtype/recommended",
+  ],
   "plugins": [
     "babel",
-    "flow-vars"
+    "flowtype"
   ],
   "env": {
     "es6": true,
     "node": true
   },
-  "globals": {},
+  "globals": {
+    "Map": false,
+    "Set": false,
+    "Promise": false
+  },
   "rules": {
+    // flowtype rules
+    "flowtype/delimiter-dangle": [1, "always-multiline"],
+    "flowtype/no-dupe-keys": 2,
+    "flowtype/object-type-delimiter": [1, "semicolon"],
+    // "flowtype/require-valid-file-annotation": [1, "always"],
+    "flowtype/semi": 1,
+    "flowtype/type-id-match": [1, "^[A-Z]"],
+    // generic rules
     "no-cond-assign": 1,                  // disallow assignment in conditional expressions
     "no-console": 0,                      // disallow use of console: should use nuclide-logging instead
     "no-constant-condition": 1,           // disallow use of constant expressions in conditions
