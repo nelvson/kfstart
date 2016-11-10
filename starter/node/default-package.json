@@ -6,7 +6,6 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "babel src --ignore \"_*\" --out-dir lib",
-    "prepublish": "if [[ \"$npm_invocation\" != \"npm install\" ]]; then npm run build; fi",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
     "test-src": "mocha \"src/**/__tests__/*.js\"",
