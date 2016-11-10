@@ -6,7 +6,7 @@
     "kfstart": "./bin/kfstart.js"
   },
   "scripts": {
-    "prepublish": "if [\"$npm_invocation\" != \"npm install\"]; then npm run build; fi",
+    "prepublish": "if [[ \"$npm_invocation\" != \"npm install\" ]]; then npm run build; fi",
     "build": "rimraf lib && babel src --ignore \"_*\" --out-dir lib",
     "build-watch": "babel src --watch --ignore \"_*\" --out-dir lib",
     "lint": "eslint . --max-warnings 0",
