@@ -1,2 +1,5 @@
 /lib
 /node_modules
+/starter/node/flow-typed
+/starter/react-native/flow-typed
+/starter/react-web/flow-typed

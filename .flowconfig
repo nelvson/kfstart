@@ -1,12 +1,11 @@
 [ignore]
-# Ignore underscore files.
-.*/_[^_].*
+# Ignore some starter config stuff
+.*/starter/node/flow-typed/.*
+.*/starter/react-native/flow-typed/.*
+.*/starter/react-web/flow-typed/.*
 
 # Ignore compiled code.
 .*/lib/.*
-
-# Ugh
-.*node_modules/fbjs.*
 
 [include]
 
