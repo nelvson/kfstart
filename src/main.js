@@ -17,7 +17,6 @@ const CONFIG = {
       'default.flowconfig': '.flowconfig',
       'default.gitignore': '.gitignore',
       'flow-typed': '',
-      test: '',
       'webpack.config.js': '',
     },
     mkdir: ['assets', 'src', 'node_modules'],
@@ -39,7 +38,7 @@ const CONFIG = {
       // webpack
       'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
-      'mocha', 'expect', 'enzyme', 'react-addons-test-utils',
+      'jest', 'enzyme', 'react-addons-test-utils',
     ],
   },
   node: {
@@ -120,21 +119,21 @@ function createProject(name, type) {
     sh.ShellString(content).to(`./${fileName}`);
   }
   console.log('Installing packages ...');
-  installPackages(config.packages, 'save', () => {
+  installPackages(config.packages, false, () => {
     console.log('Installing dev packages ...');
-    installPackages(config.devPackages, 'save-dev', () => {
+    installPackages(config.devPackages, true, () => {
       console.log('Project created successfully.');
     });
   });
 }
 
-function installPackages(packages, save, callback) {
-  let args = ['install'];
-  if (save) {
-    args.push(`--${save}`);
+function installPackages(packages, isDev, callback) {
+  let args = ['add'];
+  if (isDev) {
+    args.push('--dev');
   }
   args = args.concat(packages);
-  let child = spawn('npm', args, {cwd: process.cwd, stdio: 'inherit'});
+  let child = spawn('yarn', args, {cwd: process.cwd, stdio: 'inherit'});
   child.on('close', (code) => {
     if (code !== 0) {
       console.log(`npm exited with code ${code}`);

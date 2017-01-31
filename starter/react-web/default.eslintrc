@@ -20,7 +20,10 @@
     "Set": false,
     "ReactElement": false,
     "ReactNode": false,
-    "Promise": false
+    "Promise": false,
+    "describe": false,
+    "it": false,
+    "expect": false
   },
   "rules": {
     // flowtype rules
