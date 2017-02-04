@@ -11,7 +11,7 @@
     "build-watch": "babel src --watch --ignore \"_*\" --out-dir lib",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
-    "test-src": "mocha \"src/**/__tests__/*.js\"",
+    "test-src": "jest",
     "test": "npm run lint && npm run typecheck && npm run test-src"
   },
   "dependencies": {
@@ -31,9 +31,9 @@
     "eslint": "^3.9.1",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-flowtype": "^2.25.0",
-    "expect": "^1.20.2",
     "flow-bin": "^0.33.0",
-    "mocha": "^3.1.2",
+    "flow-typed": "^2.0.0",
+    "jest": "^18.1.0",
     "rimraf": "^2.5.3"
   },
   "repository": {

@@ -1,7 +1,4 @@
-const {describe, it} = global;
-
-import expect from 'expect';
-
+// @flow
 describe('main', () => {
   it('should run', () => {
     expect(true).toBe(true);
