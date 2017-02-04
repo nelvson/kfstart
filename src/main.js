@@ -133,13 +133,17 @@ function installPackages(packages, isDev, callback) {
     args.push('--dev');
   }
   args = args.concat(packages);
-  let child = spawn('yarn', args, {cwd: process.cwd, stdio: 'inherit'});
+  let child = spawn(binPath('yarn'), args, {cwd: process.cwd, stdio: 'inherit'});
   child.on('close', (code) => {
     if (code !== 0) {
-      console.log(`npm exited with code ${code}`);
+      console.log(`yarn exited with code ${code}`);
       process.exit();
     } else {
       callback();
     }
   });
+}
+
+function binPath(name) {
+  return path.join(__dirname, '../node_modules/.bin', name);
 }
