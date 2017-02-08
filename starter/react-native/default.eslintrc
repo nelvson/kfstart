@@ -10,17 +10,27 @@
     "react"
   ],
   "env": {
+    "es6": true,
     "node": true
   },
   "globals": {
+    // Same as browser
     "fetch": false,
     "FormData": false,
+    // Global Flow Types
     "ImageSource": false,
-    "Map": false,
-    "Set": false,
     "StyleSet": false,
     "ReactNode": false,
-    "Promise": false
+    // Jest
+    "afterAll": false,
+    "afterEach": false,
+    "beforeAll": false,
+    "beforeEach": false,
+    "describe": false,
+    "expect": false,
+    "it": false,
+    "jest": false,
+    "test": false
   },
   "rules": {
     // flowtype rules

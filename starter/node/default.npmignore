@@ -1,6 +1,5 @@
 _*
 /src
-/test
 .babelrc
 .eslintignore
 .eslintrc

@@ -2,7 +2,7 @@
 
 declare type StyleSet = number | boolean | Object | Array<?StyleSet>;
 
-declare type ReactNode = null | string | number | ReactElement<*> | Array<string | number | ReactElement<*>>;
+declare type ReactNode = null | string | number | ReactElement<*> | Array<ReactNode>;
 
 type ImageSourceURI = {
   uri: string;

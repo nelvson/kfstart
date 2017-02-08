@@ -51,7 +51,6 @@ const CONFIG = {
       'default.gitignore': '.gitignore',
       'default.npmignore': '.npmignore',
       'flow-typed': '',
-      test: '',
     },
     mkdir: ['lib', 'src', 'node_modules'],
     seedFiles: {
@@ -66,7 +65,7 @@ const CONFIG = {
       // flow
       'flow-bin',
       // testing
-      'mocha', 'expect',
+      'jest',
     ],
   },
 };

@@ -19,6 +19,7 @@
     "describe": false,
     "expect": false,
     "it": false,
+    "jest": false,
     "test": false
   },
   "rules": {
