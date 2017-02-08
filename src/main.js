@@ -121,7 +121,10 @@ function createProject(name, type) {
   installPackages(config.packages, false, () => {
     console.log('Installing dev packages ...');
     installPackages(config.devPackages, true, () => {
-      console.log('Project created successfully.');
+      console.log('Installing Flow type declarations ...');
+      installFlowTypes(name, () => {
+        console.log('Project created successfully.');
+      });
     });
   });
 }
@@ -136,6 +139,20 @@ function installPackages(packages, isDev, callback) {
   child.on('close', (code) => {
     if (code !== 0) {
       console.log(`yarn exited with code ${code}`);
+      process.exit();
+    } else {
+      callback();
+    }
+  });
+}
+
+function installFlowTypes(projectName, callback) {
+  let args = ['install'];
+  let projectDirectory = path.join(process.cwd, projectName);
+  let child = spawn(binPath('flow-typed'), args, {cwd: projectDirectory, stdio: 'inherit'});
+  child.on('close', (code) => {
+    if (code !== 0) {
+      console.log(`flow-typed exited with code ${code}`);
       process.exit();
     } else {
       callback();
