@@ -34,7 +34,7 @@ const CONFIG = {
       // eslint (with react)
       'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype', 'eslint-plugin-react',
       // flow
-      'flow-bin',
+      'flow-bin', 'flow-typed',
       // webpack
       'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
@@ -63,7 +63,7 @@ const CONFIG = {
       // eslint (without react)
       'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
       // flow
-      'flow-bin',
+      'flow-bin', 'flow-typed',
       // testing
       'jest',
     ],
@@ -152,8 +152,7 @@ function installPackages(packages, isDev, callback) {
 
 function installFlowTypes(projectName, callback) {
   let args = ['install'];
-  let projectDirectory = path.join(process.cwd(), projectName);
-  let child = spawn(binPath('flow-typed'), args, {cwd: projectDirectory, stdio: 'inherit'});
+  let child = spawn(binPath('flow-typed'), args, {cwd: process.cwd(), stdio: 'inherit'});
   child.on('close', (code) => {
     if (code !== 0) {
       console.log(`flow-typed exited with code ${code}`);
