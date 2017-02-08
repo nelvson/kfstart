@@ -56,7 +56,7 @@ const CONFIG = {
     seedFiles: {
       'src/main.js': 'console.log(\'Hello World\');\n',
     },
-    packages: [],
+    packages: ['node-fetch'],
     devPackages: [
       // babel (without react)
       'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties', 'babel-plugin-transform-flow-strip-types', 'babel-plugin-syntax-flow',
@@ -130,6 +130,10 @@ function createProject(name, type) {
 }
 
 function installPackages(packages, isDev, callback) {
+  if (packages.length === 0) {
+    callback();
+    return;
+  }
   let args = ['add'];
   if (isDev) {
     args.push('--dev');
