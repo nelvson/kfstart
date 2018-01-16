@@ -2,5 +2,5 @@
 /* eslint-disable no-unused-vars */
 
 declare module CSSModuleStub {
-  declare var exports: {[key: string]: string};
+  declare export default {[key: string]: string};
 }
