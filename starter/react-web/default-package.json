@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --content-base assets/",
     "build": "webpack",
     "build-watch": "webpack --watch",
+    "format": "prettier-eslint --write \"src/**/*.js\"",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
     "test-src": "jest",
@@ -16,5 +17,10 @@
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
 }

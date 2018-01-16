@@ -5,6 +5,7 @@
   "description": "$NAME",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "format": "prettier-eslint --write \"src/**/*.js\"",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "flow",
     "test-src": "jest",
@@ -14,5 +15,10 @@
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
 }

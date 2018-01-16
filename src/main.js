@@ -39,6 +39,8 @@ const CONFIG = {
       'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
       'jest', 'enzyme', 'react-addons-test-utils',
+      // code formatting
+      'prettier-eslint', 'prettier-eslint-cli',
     ],
   },
   node: {
@@ -66,6 +68,8 @@ const CONFIG = {
       'flow-bin', 'flow-typed',
       // testing
       'jest',
+      // code formatting
+      'prettier-eslint', 'prettier-eslint-cli',
     ],
   },
 };
