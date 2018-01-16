@@ -27,7 +27,6 @@
     "it": false,
     "test": false,
     "xdescribe": false,
-    "xdescribe": false,
     "xit": false,
     "xtest": false,
     "expect": false,
