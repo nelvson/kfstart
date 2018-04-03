@@ -194,9 +194,9 @@
     "sort-vars": 0,                       // sort variables within the same declaration block
     "keyword-spacing": 1,                 // require a space around certain keywords
     "space-before-blocks": 1,             // require a space before blocks
-    "space-before-function-paren": [      // disallow a space before function parenthesis
-      1, "never"
-    ],
+    // "space-before-function-paren": [      // disallow a space before function parenthesis
+    //   1, "never"
+    // ],
     "babel/object-curly-spacing": [             // disallow spaces inside of curly braces in object literals
       1, "never"
     ],
