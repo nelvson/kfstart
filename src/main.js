@@ -38,7 +38,7 @@ const CONFIG = {
       // webpack
       'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
-      'jest', 'enzyme', 'react-addons-test-utils',
+      'jest', 'enzyme', 'enzyme-adapter-react-16', 'react-addons-test-utils',
       // code formatting
       'prettier-eslint', 'prettier-eslint-cli',
     ],
