@@ -52,6 +52,7 @@ const CONFIG = {
       'default.flowconfig': '.flowconfig',
       'default.gitignore': '.gitignore',
       'default.npmignore': '.npmignore',
+      'default.prettierignore': '.prettierignore',
       'flow-typed': '',
     },
     mkdir: ['lib', 'src', 'node_modules'],
@@ -61,7 +62,7 @@ const CONFIG = {
     packages: ['node-fetch'],
     devPackages: [
       // babel (without react)
-      'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties', 'babel-plugin-transform-flow-strip-types', 'babel-plugin-syntax-flow',
+      'babel-cli', 'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties', 'babel-plugin-transform-flow-strip-types', 'babel-plugin-syntax-flow',
       // eslint (without react)
       'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
       // flow

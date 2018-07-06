@@ -7,6 +7,9 @@
 # Ignore compiled code.
 .*/lib/.*
 
+# Ignore problematic libs
+.*/node_modules/chalk/.*
+
 [include]
 
 [libs]
