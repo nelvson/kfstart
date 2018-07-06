@@ -1,9 +1,6 @@
 [ignore]
 # Ignore compiled code.
 <PROJECT_ROOT>/lib/.*
-# Ignore node_modules
-.*/node_modules/*
-
 
 [include]
 
