@@ -36,7 +36,7 @@ const CONFIG = {
       // flow
       'flow-bin', 'flow-typed',
       // webpack
-      'webpack', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
+      'webpack', 'webpack-cli', 'webpack-dev-server', 'babel-loader', 'css-loader', 'css-modules-require-hook', 'raw-loader', 'style-loader',
       // testing
       'jest', 'enzyme', 'enzyme-adapter-react-16', 'react-addons-test-utils',
       // code formatting
@@ -76,7 +76,7 @@ const CONFIG = {
 };
 
 program
-  .version(version)
+  .version(version, '-v,--version')
   .usage('init <project_name> [options]')
   .option('-t, --type [react|react-native|node]', 'Create a project of the given type.', 'react');
 
@@ -114,7 +114,7 @@ function createProject(name, type) {
     let dstFile = configFiles[srcFile];
     sh.cp('-R', `${starterPath}/${srcFile}`, `./${dstFile}`);
   }
-  console.log('Creating direcotries ...');
+  console.log('Creating directories ...');
   if (mkdir && mkdir.length) {
     sh.mkdir(...mkdir);
   }
