@@ -49,5 +49,11 @@
   "bugs": {
     "url": "https://github.com/kodefox/kfstart/issues"
   },
-  "homepage": "https://github.com/kodefox/kfstart#readme"
+  "homepage": "https://github.com/kodefox/kfstart#readme",
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  }
 }
