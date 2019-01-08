@@ -19,8 +19,9 @@ const CONFIG = {
       'flow-typed': '',
       'webpack.config.js': '',
     },
-    mkdir: ['assets', 'src', 'node_modules'],
+    mkdir: ['.vscode', 'assets', 'src', 'node_modules'],
     seedFiles: {
+      '.vscode/settings.json': '{\n  "javascript.validate.enable\": false\n}\n',
       'src/main.js': 'console.log(\'Hello World\');\n',
       'assets/index.html': '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>App</title>\n</head>\n<body>\n  <script src="/main.js"></script>\n</body>\n</html>\n',
     },
@@ -32,7 +33,9 @@ const CONFIG = {
       // babel (with react)
       'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties',
       // eslint (with react)
-      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype', 'eslint-plugin-react',
+      'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
+      'eslint-plugin-jest', 'eslint-config-react-app', 'eslint-plugin-import',
+      'eslint-plugin-jsx-a11y', 'eslint-plugin-react',
       // flow
       'flow-bin', 'flow-typed',
       // webpack
@@ -55,8 +58,9 @@ const CONFIG = {
       'default.prettierignore': '.prettierignore',
       'flow-typed': '',
     },
-    mkdir: ['lib', 'src', 'node_modules'],
+    mkdir: ['.vscode', 'lib', 'src', 'node_modules'],
     seedFiles: {
+      '.vscode/settings.json': '{\n  "javascript.validate.enable\": false\n}\n',
       'src/main.js': 'console.log(\'Hello World\');\n',
     },
     packages: ['node-fetch'],
@@ -65,6 +69,8 @@ const CONFIG = {
       'babel-cli', 'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties', 'babel-plugin-transform-flow-strip-types', 'babel-plugin-syntax-flow',
       // eslint (without react)
       'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
+      'eslint-plugin-jest', 'eslint-config-react-app', 'eslint-plugin-import',
+      'eslint-plugin-jsx-a11y', 'eslint-plugin-react',
       // flow
       'flow-bin', 'flow-typed',
       // testing
