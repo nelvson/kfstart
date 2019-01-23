@@ -33,7 +33,7 @@ const CONFIG = {
     ],
     devPackages: [
       // babel (with react)
-      'babel-core', 'babel-preset-es2015', 'babel-preset-react', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties',
+      'babel-core', 'babel-preset-es2015-native-generators', 'babel-preset-react', 'babel-preset-stage-2', 'babel-plugin-transform-class-properties',
       // eslint (with react)
       'eslint', 'babel-eslint', 'eslint-plugin-babel', 'eslint-plugin-flowtype',
       'eslint-plugin-jest', 'eslint-config-react-app', 'eslint-plugin-import',
