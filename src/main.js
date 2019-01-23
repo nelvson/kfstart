@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 import path from 'path';
 import program from 'commander';
 import sh from 'shelljs';
@@ -17,6 +18,7 @@ const CONFIG = {
       'default.flowconfig': '.flowconfig',
       'default.gitignore': '.gitignore',
       'flow-typed': '',
+      'test': '',
       'webpack.config.js': '',
     },
     mkdir: ['.vscode', 'assets', 'src', 'node_modules'],
