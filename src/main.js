@@ -76,9 +76,37 @@ const CONFIG = {
   },
   'react-native-expo': {
     scripts: {
-      base: 'expo init ',
-      parameters: ' --template blank --workflow managed --name ',
+      expo: {
+        base: 'expo init ',
+        parameters: ' --template blank --workflow managed --name ',
+      },
     },
+    configFiles: {
+      'default.eslintignore': '.eslintignore',
+      'default.eslintrc': '.eslintrc',
+      'default.prettierignore': '.prettierignore',
+      'default.flowconfig': '.flowconfig',
+    },
+    devPackages: [
+      //prettier
+      'prettier-eslint',
+      'prettier-eslint-cli',
+
+      //flow
+      'flow-bin',
+      'flow-typed',
+
+      //eslint
+      'eslint',
+      'babel-eslint',
+      'eslint-config-react-app',
+      'eslint-plugin-babel',
+      'eslint-plugin-flowtype',
+      'eslint-plugin-react',
+      'eslint-plugin-jest',
+      'eslint-plugin-import',
+      'eslint-plugin-jsx-a11y',
+    ],
   },
   'react-native': {
     starter: 'react-native',
@@ -224,7 +252,7 @@ function createProject(name, type) {
   console.log(`Creating directory "${name}" ...`);
 
   if (type === 'react-native-expo') {
-    console.log('Executing scripts ...');
+    console.log('Executing expo ...');
     let executeScript = scripts.base + name + scripts.parameters + name;
     sh.exec(executeScript);
     return;
