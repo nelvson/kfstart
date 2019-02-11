@@ -74,8 +74,8 @@ const CONFIG = {
       'prettier-eslint-cli',
     ],
   },
-  native: {
-    starter: 'react-web',
+  'react-native': {
+    starter: 'react-native',
     configFiles: {
       'default.babelrc': '.babelrc',
       'default.eslintignore': '.eslintignore',
@@ -87,19 +87,14 @@ const CONFIG = {
       'webpack.config.js': '',
     },
     mkdir: ['.vscode', 'assets', 'src', 'node_modules'],
+    scripts: ['mkdir helloworld', 'mkdir quickfox'],
     seedFiles: {
       '.vscode/settings.json': '{\n  "javascript.validate.enable": false\n}\n',
       'src/main.js': "console.log('Hello World');\n",
       'assets/index.html':
         '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>App</title>\n</head>\n<body>\n  <script src="/main.js"></script>\n</body>\n</html>\n',
     },
-    packages: [
-      // react
-      'react',
-      'react-dom',
-      'class-autobind',
-      'classnames',
-    ],
+    packages: ['react', 'react-native'],
     devPackages: [
       // babel (with react)
       'babel-core',
@@ -139,7 +134,6 @@ const CONFIG = {
       'prettier-eslint-cli',
     ],
   },
-
   node: {
     starter: 'node',
     configFiles: {
@@ -219,11 +213,18 @@ function createProject(name, type) {
     return;
   }
   let config = CONFIG[type];
-  let {starter, configFiles, mkdir, seedFiles} = config;
+  let {starter, configFiles, mkdir, seedFiles, scripts} = config;
+
   let starterPath = `${basePath}/starter/${starter}`;
   console.log(`Creating directory "${name}" ...`);
   sh.mkdir(name);
   sh.cd(name);
+
+  console.log(`Executing scripts ...`);
+  for (let script of scripts) {
+    sh.exec(script);
+  }
+
   console.log('Writing package.json ...');
   let pkgJSON = sh.cat(`${starterPath}/default-package.json`);
   let pkg = JSON.parse(pkgJSON);
