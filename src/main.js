@@ -74,6 +74,12 @@ const CONFIG = {
       'prettier-eslint-cli',
     ],
   },
+  'react-native-expo': {
+    scripts: {
+      base: 'expo init ',
+      parameters: ' --template blank --workflow managed --name ',
+    },
+  },
   'react-native': {
     starter: 'react-native',
     configFiles: {
@@ -87,7 +93,6 @@ const CONFIG = {
       'webpack.config.js': '',
     },
     mkdir: ['.vscode', 'assets', 'src', 'node_modules'],
-    scripts: ['mkdir helloworld', 'mkdir quickfox'],
     seedFiles: {
       '.vscode/settings.json': '{\n  "javascript.validate.enable": false\n}\n',
       'src/main.js': "console.log('Hello World');\n",
@@ -187,7 +192,7 @@ program
   .version(version, '-v,--version')
   .usage('init <project_name> [options]')
   .option(
-    '-t, --type [react|react-native|node]',
+    '-t, --type [react|react-native|react-native-expo|node]',
     'Create a project of the given type.',
     'react',
   );
@@ -217,13 +222,16 @@ function createProject(name, type) {
 
   let starterPath = `${basePath}/starter/${starter}`;
   console.log(`Creating directory "${name}" ...`);
+
+  if (type === 'react-native-expo') {
+    console.log('Executing scripts ...');
+    let executeScript = scripts.base + name + scripts.parameters + name;
+    sh.exec(executeScript);
+    return;
+  }
+
   sh.mkdir(name);
   sh.cd(name);
-
-  console.log(`Executing scripts ...`);
-  for (let script of scripts) {
-    sh.exec(script);
-  }
 
   console.log('Writing package.json ...');
   let pkgJSON = sh.cat(`${starterPath}/default-package.json`);
